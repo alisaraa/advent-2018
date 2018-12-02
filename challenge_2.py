@@ -28,14 +28,14 @@ line_no = 0
 for line in f:
     line_no = line_no + 1
     for next_line in f[line_no:]:
-        mismatch_array = []
+        matched_array = []
         mismatch = 0
         letters = 0
         while letters < len(line):
             if line[letters] != next_line[letters]:
                 mismatch = mismatch + 1
             else:
-                mismatch_array.append(line[letters])
+                matched_array.append(line[letters])
             letters = letters + 1
         if mismatch == '1' or mismatch == 1:
-            print(''.join(mismatch_array))
+            print(''.join(matched_array))
